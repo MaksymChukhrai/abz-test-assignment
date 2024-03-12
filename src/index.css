@@ -1,4 +1,13 @@
-@import-normalize; /* bring in normalize.css styles */
+@import-normalize;
+:root{
+  --primary-black-color: rgba(0, 0, 0, 0.87);
+  --primary-white-color:#FFFFFF;
+  --button-text-shadow:0px 4px 4px rgba(0, 0, 0, 0.25);
+  --primary-background-color: #F8F8F8;
+  --disabled-button-color: #B4B4B4;
+  --primary-button-color:#F4E041;
+  --hover-button-color: #FFE302;
+}
 
 body {
   margin: 0;
@@ -7,9 +16,218 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+ background-color:var(--primary-background-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+ margin: 0;
+}
+
+ul,
+ol {
+ margin: 0;
+ padding: 0;
+}
+
+img {
+ display: block;
+ max-width: 100%;
+ height: auto;
+}
+
+/*------------ mob----------- */
+/* header */
+.container-header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  padding-top:16px;
+  padding-bottom: 16px;
+  background: var(--primary-white-color);
+}
+/* .logo-block{
+  display: flex;
+  align-items: center;
+} */
+.logo-img{
+  width: 104px;
+  height: 26px;
+}
+.task-title{
+  text-transform: uppercase;
+}
+.header-btn-block{
+  display:flex;
+  gap:10px;
+
+}
+.users-btn,
+.signup-btn,
+.hero-btn,
+.showmore-btn{
+  width: 100px;
+  height: 34px;
+  background:var(--primary-button-color);
+border-radius: 80px;
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 1.62;
+border:none;
+display: flex;
+align-items: center;
+justify-content: center;
+color: var(--primary-black-color);
+/* text-shadow: var(--button-text-shadow); */
+}
+.users-btn:hover,
+.signup-btn:hover,
+.hero-btn:hover,
+.showmore-btn:hover{
+  background-color: var(--hover-button-color);
+  cursor: pointer;
+}
+/* main */
+.hero{
+  position: relative;
+  background-repeat: no-repeat;
+  height: 500px;
+  max-width: 360px;
+  margin: 0 auto;
+  background-image: url(./img/hero@1-mob.jpg);
+}
+.hero-container{
+  padding-top: 40px;
+  margin: 0px 16px;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: nowrap; */
+  align-items: center;
+
+}
+.hero-slogan{
+  font-family: "Nunito", sans-serif; 
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  text-align: center;
+  color: var(--primary-white-color);
+  margin-bottom: 21px;
+}
+.hero-title{
+  font-family: 'Nunito';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  color: var(--primary-white-color);
+  margin-bottom: 32px;
+}
+/* EmployeeCards */
+.employeeCards{
+display:flex;
+flex-direction: column;
+align-items: center;
+margin:140px 16px;
+
+}
+.employeeCards h1,
+.SignUpForm h1{
+  font-family: "Nunito", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.em-items{
+list-style: none;
+margin-bottom: 50px;
+margin-top: 50px;
+display:block;
+background-color: var(--primary-white-color);
+border-radius: 10px;
+}
+/* .em-photo{
+
+} */
+
+/* POST form */
+.SignUpForm{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 140px 16px;
+}
+.form{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label input{
+  width: 308px;
+  height: 50px;
+  background: var(--primary-background-color);
+  border: 1px solid #D0CFCF;
+  border-radius: 4px;
+
+  margin-bottom: 50px;
+  padding-left: 16px;
+}
+.form-label input::placeholder {
+  margin-left: 26px; 
+  font-family: 'Nunito';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.62;
+}
+.form-radio-group{
+  border: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito';
+    line-height: 1.62;
+}
+.form-radio-group legend{
+  margin-bottom: 11px; 
+}
+.form-radio-group label {
+  display: flex; 
+  align-items: center; 
+  margin-bottom: 16px; 
+}
+
+.form-radio-group label input[type="radio"] {
+  margin-right: 16px; 
+  width: 20px;
+  height: 20px;
+}
+.signup-btn{
+  margin: 0 auto;
+}
+
+.form-input{
+  width: 328px;
+    height: 54px;
+    background: var(--primary-background-color);
+    border: 1px solid #D0CFCF;
+    border-radius: 4px;
+    margin-bottom: 50px;
+}
+.disabled{
+  background-color: var(--disabled-button-color);
 }
