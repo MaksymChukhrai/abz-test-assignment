@@ -219,14 +219,42 @@ border-radius: 10px;
 .signup-btn{
   margin: 0 auto;
 }
+.upload-block{
+  display:flex;
+  margin-bottom: 50px;
+  cursor: pointer;
+  border: 1px solid #D0CFCF;
+  border-radius:4px 4px 4px 4px;
+  height: 54px;
 
-.form-input{
-  width: 328px;
-    height: 54px;
-    background: var(--primary-background-color);
-    border: 1px solid #D0CFCF;
-    border-radius: 4px;
-    margin-bottom: 50px;
+}
+#placeholder{
+  padding-top: 17px;
+  padding-left: 16px;
+  font-family: 'Nunito';
+  font-size: 16px;
+  color: #7E7E7E;
+}
+#uploadInput {
+  /* Скрытие текстового поля "Выбрать файл" */
+  &::-webkit-file-upload-button {
+    display: none;
+  }
+  display: none;
+}
+
+
+
+
+.btn-upload-order{
+  height: 54px;
+  width: 83px;
+  border: 1px solid #7E7E7E;
+  border-radius: 4px 0px 0px 4px;
+cursor: pointer;
+font-family: 'Nunito';
+font-size: 16px;
+color:#000000;
 }
 .disabled{
   background-color: var(--disabled-button-color);

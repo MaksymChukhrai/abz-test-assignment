@@ -3,17 +3,24 @@
 import React from 'react';
 
 function SignUpForm() {
+  const handleUploadButtonClick = () => {
+    const fileInput = document.getElementById('uploadInput');
+    if (fileInput) {
+      fileInput.click();
+    }
+  };
+
   return (
     <section className='SignUpForm'>
       <h1>Working with POST request</h1>
       <div className='contact-form'>
-  <form
-    action="#"
-    className="form"
-    method="POST"
-    encType="multipart/form-data"
-  >
-    <label className="form-label">
+        <form
+          action="#"
+          className="form"
+          method="POST"
+          encType="multipart/form-data"
+        >
+           <label className="form-label">
          <input
         type="text"
         name="name"
@@ -63,38 +70,32 @@ function SignUpForm() {
         QA
       </label>
     </fieldset>
-
-    <label className="form-label-order">
-  <div className="upload-block">
-    <input
-      type="file"
-      name="file[]"
-      id="myfile"
-      accept=".jpg, .png, .gif"
-      className="form-input form-input-order"
-      // onChange={() => previewFiles()}
-    />
-    {/* <button 
-      className="btn-upload-order"
-      type="button"
-      onClick={() => document.querySelector('input[name=file]').click()}
-    >
-      Upload
-    </button> */}
-  </div>
-  {/* <p>Upload your photo</p> */}
-</label>
-
-
-    {/* <div className="file_preview">
-      <img className="preview-image" alt=""/>
-    </div> */}
-
-      <button className="signup-btn disabled" type="submit">
-          Sign up
-      </button>
-  </form>
-</div>
+   
+          <label className="form-label-order">
+            <div className="upload-block">
+              <button
+                className="btn-upload-order upload-button"
+                type='button'
+                onClick={handleUploadButtonClick} // Добавляем обработчик события
+              >
+                Upload
+              </button>
+              <p id="placeholder">Upload your photo</p>
+              <input
+                type="file" // Заменяем type на "file" для корректной работы
+                name="file[]"
+                id="uploadInput"
+                placeholder="Upload your photo"
+                accept=".jpg, .png, .gif"
+                className="form-input form-input-order"
+              />
+            </div>
+          </label>
+          <button className="signup-btn disabled" type="submit">
+            Sign up
+          </button>
+        </form>
+      </div>
     </section>
   );
 }

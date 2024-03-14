@@ -1,5 +1,6 @@
 // src/components/App.jsx
 import React from 'react'; 
+import ReactDOM from 'react-dom'; 
 import Header from './Header/Header'; 
 import Main from './Main/Main';
 import EmployeeCards from './EmploeeCards/EmployeeCards';
@@ -17,3 +18,4 @@ export const App = () => {
 };
 
 export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
