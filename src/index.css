@@ -220,6 +220,7 @@ border-radius: 10px;
   margin: 0 auto;
 }
 .upload-block{
+  position: relative;
   display:flex;
   margin-bottom: 50px;
   cursor: pointer;
@@ -240,6 +241,15 @@ border-radius: 10px;
   &::-webkit-file-upload-button {
     display: none;
   }
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: 100px;
+  font-family: 'Nunito';
+    font-size: 16px;
+    color: #7E7E7E;
+}
+.is-hidden {
   display: none;
 }
 

@@ -76,18 +76,18 @@ function SignUpForm() {
               <button
                 className="btn-upload-order upload-button"
                 type='button'
-                onClick={handleUploadButtonClick} // Добавляем обработчик события
+                onClick={handleUploadButtonClick} 
               >
                 Upload
               </button>
-              <p id="placeholder">Upload your photo</p>
+              <p id="placeholder">Upload your file</p>
               <input
-                type="file" // Заменяем type на "file" для корректной работы
+                type="file"
                 name="file[]"
                 id="uploadInput"
-                placeholder="Upload your photo"
+             
                 accept=".jpg, .png, .gif"
-                className="form-input form-input-order"
+                className="form-input form-input-order  "
               />
             </div>
           </label>

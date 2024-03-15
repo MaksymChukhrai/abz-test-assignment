@@ -1,30 +1,34 @@
 //src\utils\upload.js
 document.addEventListener('DOMContentLoaded', function() {
-  // Получаем ссылку на кнопку "Upload" и поле ввода
-  const uploadButton = document.querySelector('.btn-upload-order');
-  const fileInput = document.querySelector('#uploadInput');
+  const uploadButton = document.querySelector('.btn-upload-order'); 
+  const fileInput = document.querySelector('#uploadInput'); // Нужен id
+  const placeholder = document.querySelector('#placeholder');
+ 
 
-  if (uploadButton && fileInput) {
-    // Добавляем обработчик события на кнопку "Upload"
+  if (uploadButton && fileInput && placeholder) {
+
     uploadButton.addEventListener('click', () => {
-      // При клике на кнопку открываем проводник файлов
       fileInput.click();
-      console.log('click event');
-      console.log('fileInput value:', fileInput.value);
+      console.log('click', 'Button is working');
     });
 
-    // Добавляем обработчик события на изменение значения поля ввода файла
     fileInput.addEventListener('change', () => {
-      // Обновляем значение поля ввода с названием выбранного файла
       if (fileInput.files.length > 0) {
         const fileName = fileInput.files[0].name;
-        fileInput.value = fileName;
+        placeholder.innerText = fileName; 
+
+        // Добавляем/удаляем классы для корректной видимости
+        placeholder.classList.add('is-hidden');
+        fileInput.classList.remove('is-hidden'); 
       } else {
-        // Если файл не выбран, устанавливаем новый текст placeholder
-        fileInput.setAttribute('.placeholder', 'Upload your photo');
+        placeholder.innerText = 'Upload your file';
+
+        // Отображаем placeholder, скрываем input
+        placeholder.classList.remove('is-hidden');
+        fileInput.classList.add('is-hidden'); 
       }
     });
   } else {
-    console.error('Elements not found:', uploadButton, fileInput);
+    console.error('Elements not found:', uploadButton, fileInput, placeholder);
   }
 });
