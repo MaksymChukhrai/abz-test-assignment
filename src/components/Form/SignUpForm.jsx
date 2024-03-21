@@ -2,6 +2,7 @@
 
 import React from 'react';
 
+
 function SignUpForm() {
   const handleUploadButtonClick = () => {
     const fileInput = document.getElementById('uploadInput');
@@ -85,7 +86,6 @@ function SignUpForm() {
                 type="file"
                 name="file[]"
                 id="uploadInput"
-             
                 accept=".jpg, .png, .gif"
                 className="form-input form-input-order  "
               />
@@ -96,7 +96,9 @@ function SignUpForm() {
           </button>
         </form>
       </div>
+
     </section>
+    
   );
 }
 

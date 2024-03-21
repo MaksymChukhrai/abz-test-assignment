@@ -106,7 +106,7 @@ color: var(--primary-black-color);
   height: 500px;
   max-width: 360px;
   margin: 0 auto;
-  background-image: url(./img/hero@1-mob.jpg);
+  background-image: url(../img/hero@1-mob.jpg);
 }
 .hero-container{
   padding-top: 40px;
@@ -239,9 +239,9 @@ border-radius: 10px;
 #uploadInput {
   /* Скрытие текстового поля "Выбрать файл" */
   &::-webkit-file-upload-button {
-    display: none;
+    /* display: none; */
   }
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 15px;
   left: 100px;
@@ -250,10 +250,17 @@ border-radius: 10px;
     color: #7E7E7E;
 }
 .is-hidden {
-  display: none;
+  /* display: none; */
 }
 
+.loader {
+  filter: invert(0); /* Инвертирует цвет изображения */
+  height: 100px;
+  width: 100px;
 
+  background-color:var(--primary-background-color);
+  border-radius: 50px;
+}
 
 
 .btn-upload-order{

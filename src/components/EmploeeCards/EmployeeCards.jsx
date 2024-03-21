@@ -15,6 +15,7 @@ function EmployeeCards({ employees }) {
         <button className="showmore-btn" type="button">
         Show more
         </button>
+        
       </section>
     );
   }

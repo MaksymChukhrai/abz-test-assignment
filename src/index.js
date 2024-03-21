@@ -4,7 +4,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import App from './components/App';
 import './utils/upload.js';
-import './index.css';
+import './styles/main.scss';
 
 // Подключение вспомогательных JavaScript файлов
 // import './utils/helpers';
